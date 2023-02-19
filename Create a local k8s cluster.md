@@ -1,6 +1,9 @@
 
 ## Create a cluster with k3d 
 
+
+- [] [example taken from the following page] https://learnk8s.io/kafka-ha-kubernetes
+
 k3d cluster create kube-cluster \
   --agents 3 \
   --k3s-node-label topology.kubernetes.io/zone=zone-a@agent:0 \
