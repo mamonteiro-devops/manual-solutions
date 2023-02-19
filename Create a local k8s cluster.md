@@ -30,4 +30,7 @@ k3d cluster create kube-cluster \
 ```
 
   Now execute the command:
+
+```
     kind create cluster --config k8s-example-config.yaml
+```
