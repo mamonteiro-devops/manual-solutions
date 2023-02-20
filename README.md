@@ -7,10 +7,11 @@
 Decisions Log
     API Gataway to use (Kong, Traefik , Nginx and Haproxy)
 
+
 Installation manuals
+    
     ```
     kubectl create namespace argocd
-
     argocd app create kong-api-gateway --repo https://github.com/Kong/charts.git --path charts/kong/ --dest-server https://kubernetes.default.svc --dest-namespace kong
 
 
