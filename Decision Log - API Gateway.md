@@ -24,16 +24,19 @@ With adoption of Kubernetes containers and cloud native architectures for modern
 <br/>
 <br/>
 
-### Kong
+## Kong
 
-### Traefik
+## Traefik
 
-### HAProxy
+## HAProxy
 
-### Nginx
+## Nginx
 
+## Amazon api gateway
 
+- [Integrate Amazon API Gateway with Amazon EKS] (https://aws.amazon.com/blogs/containers/integrate-amazon-api-gateway-with-amazon-eks/)
 
 ## Decision
     Final decision about the API that I will use for my PoC
+
 

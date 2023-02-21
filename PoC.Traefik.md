@@ -20,3 +20,5 @@
 
 
 
+traefik/traefik-helm-chart
+    https://github.com/traefik/traefik-helm-chart
