@@ -28,6 +28,14 @@ With adoption of Kubernetes containers and cloud native architectures for modern
 
 ## Traefik
 
+Definition found in the traefik.io
+
+What is an API Gateway?
+An API gateway sits between your backend services and API clients. It processes API requests, at scale, validates them, adds authentication and authorization, applies rate limiting, and routes them to the proper backend.
+
+API gateways are becoming increasingly popular as a way to decouple the client and server components of an application. This separation of concerns allows developers to update and maintain their backend services without affecting the client-side code. API gateways also enable developers to scale their services independently, making it easier to handle high traffic levels.
+
+
 ## HAProxy
 
 ## Nginx
