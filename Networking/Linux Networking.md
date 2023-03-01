@@ -40,6 +40,44 @@ nmcli is a command-line tool for controlling NetworkManager and reporting networ
 ## nmap
 
 ## netstat
+List all connections
+netstat -a
+
+List only TCP or UDP connections
+netstat -at
+netstat -au
+
+Check listening connections - Open Ports
+netstat -tnl
+
+Get process name/pid and user id
+sudo netstat -nlpt
+sudo netstat -ltpe
+
+Print statistics
+netstat -s
+
+Display kernel routing information
+netstat -rn
+
+Print network interfaces
+netstat -i
+netstat -ie
+
+Get netstat output continuously
+netstat -ct
+
+Display multicast group information
+netstat -g
+
+Print active connections
+netstat -atnp | grep ESTA
+watch -d -n0 "netstat -atnp | grep ESTA"
+
+Check if a service is running
+sudo netstat -aple | grep ntp
+
+
 ## netcat
 ## Openssl
 ## curl
