@@ -26,8 +26,12 @@
     Open Cluster Management is a community-driven project focused on multicluster and multicloud scenarios for Kubernetes apps. Open APIs are evolving within this project for cluster registration, work distribution, dynamic placement of policies and workloads, and much more.
 
 6) RedHat Advanced Cluster Management (ACM)
+    Not installed in my local environment, so for now I will not describe this option
 
 7) Traffic Mirroring in Service Meshes
 
 8) Scale applications using multi-Region Amazon EKS and Amazon Aurora Global Database
+
+
+
 
