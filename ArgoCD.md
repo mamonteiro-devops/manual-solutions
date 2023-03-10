@@ -37,6 +37,8 @@ helm repo add argo https://argoproj.github.io/argo-helm
 Install Chart
 
 ```
+kubectl create ns argocd
+
 helm install my-argo-cd argo/argo-cd --version 4.5.8
 ```
 
