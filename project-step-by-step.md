@@ -45,6 +45,8 @@ kubectl get svc -n ui
 -- Calico
 
 ```
+kubectl apply -f "https://docs.projectcalico.org/manifests/calico.yaml"
+
 helm repo add projectcalico https://docs.tigera.io/calico/charts
 
 echo '{ installation: {kubernetesProvider: EKS }}' > values.yaml
