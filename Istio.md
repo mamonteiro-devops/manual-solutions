@@ -29,8 +29,11 @@ kubectl get deployments -n istio-system --output wide
 
 
 
+
+
 (Optional) Install an ingress gateway:
 
 $ kubectl create namespace istio-ingress
 $ kubectl label namespace istio-ingress istio-injection=enabled
 $ helm install istio-ingress istio/gateway -n istio-ingress --wait
+

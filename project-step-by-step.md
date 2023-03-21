@@ -77,6 +77,8 @@ Install the Tigera Calico operator and custom resource definitions using the Hel
     watch kubectl get pods -n calico-system
 
 
+ The default encapsulation for Calico is a IP-in-IP protocol, which involves wrapping a layer 3 IP packet 
+
 ```
 
 
