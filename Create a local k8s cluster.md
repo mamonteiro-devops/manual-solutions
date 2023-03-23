@@ -26,13 +26,6 @@ f
 
   create a file called k8s-example-config.yaml with the following content
 
-
-cat <<EOF > print.sh
-#!/bin/bash
-echo \$PWD
-echo $PWD
-EOF
-
 ```
 cat <<EOF > k8s-example-config.yaml
     kind: Cluster
