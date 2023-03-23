@@ -26,7 +26,15 @@ f
 
   create a file called k8s-example-config.yaml with the following content
 
+
+cat <<EOF > print.sh
+#!/bin/bash
+echo \$PWD
+echo $PWD
+EOF
+
 ```
+cat <<EOF > k8s-example-config.yaml
     kind: Cluster
     apiVersion: kind.x-k8s.io/v1alpha4
     nodes:
@@ -34,6 +42,7 @@ f
     - role: worker
     - role: worker
     - role: worker
+EOF
 ```
 
   Now execute the command:
