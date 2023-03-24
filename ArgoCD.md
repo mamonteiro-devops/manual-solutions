@@ -18,6 +18,9 @@ kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.4.7/manif
 
 kubectl edit svc argocd-server -n argocd
 	Define this service as LoadBalancer
+
+kubectl port-forward service/argocd-server -n argocd 8080:443
+
 ```
 
 Get secret
@@ -46,22 +49,7 @@ In order to access the server UI you have the following options:
 
 ```
 kubectl port-forward service/my-argo-cd-argocd-server -n default 8080:443
-```
 
-and then open the browser on http://localhost:8080 and accept the certificate
-
-Enable ingress in the values file `server.ingress.enabled` and either
-
-- Add the annotation for ssl passthrough: https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/ingress.md#option-1-ssl-passthrough
-\
-
-- Add the `--insecure` flag to `server.extraArgs` in the values file and terminate SSL at your ingress: https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/ingress.md#option-2-multiple-ingress-objects-and-hosts
-
-
-After reaching the UI the first time you can login with username: admin and the random password generated during the installation. You can find the password by 
-running:
-
-```
 kubectl -n default get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
@@ -79,7 +67,4 @@ argocd login <ALB address>
 argocd app create external-dns --repo https://charts.bitnami.com/bitnami --helm-chart external-dns --revision 6.14.0 --dest-server https://kubernetes.default.svc --dest-namespace external-dns
 
 ```
-
-
-
 
