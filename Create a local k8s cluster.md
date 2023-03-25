@@ -14,7 +14,7 @@ k3d cluster create kube-cluster \
 
   kubectx  k3d-kube-cluster
 
-  k3d cluster kist
+  k3d cluster list
   k3d cluster delete kube-cluster
 f
 

@@ -8,7 +8,6 @@
     aws eks --region <AWS REGION> update-kubeconfig --name <EKS CLUSTER NAME>
 
 
-
 ## Install ArgoCD
 
 ```
@@ -32,39 +31,44 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ## Install ArgoCD
 How to Install the Argo-Cd Helm Chart
 
-Add Chart Repository to Helm
 ```
 helm repo add argo https://argoproj.github.io/argo-helm
-```
-
-Install Chart
-
-```
 kubectl create ns argocd
 
 helm install my-argo-cd argo/argo-cd --version 4.5.8
-```
-
-In order to access the server UI you have the following options:
-
-```
 kubectl port-forward service/my-argo-cd-argocd-server -n default 8080:443
-
 kubectl -n default get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
+kubectl get secret -n argocd argocd-initial-admin-secret -o yaml
 ```
 
 
-## Example of a simple deploy
+## Argocd CLI
+```
+brew install argocd
+```
+
+Download With Curl
+Download latest version
 
 ```
-argocd login localhost:8080
-
-
-k create ns external-dns
-
-argocd login <ALB address>
-
-argocd app create external-dns --repo https://charts.bitnami.com/bitnami --helm-chart external-dns --revision 6.14.0 --dest-server https://kubernetes.default.svc --dest-namespace external-dns
-
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
 ```
+
+
+## ArgoCD application
+
+k apply -f application.yaml
+k get application -n argocd 
+
+argocd login localhost:8080 --insecure
+argocd app list
+
+### Directory of files 
+
+cd /home/mamonteiro/manuel.monteiro.github/gitops/argocd-apps-definitions/applications and projects
+
+kubectl  apply -f application\ -\ Directory\ options.yaml
 
